@@ -477,3 +477,129 @@ MOBILE
   }
 
 }
+/* =========================================================
+   RESPONSIVE HEADER + LOGO — FINAL FIX
+   ========================================================= */
+
+/* Prevent any element from causing horizontal overflow */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header must contain the logo */
+header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+/* Logo image */
+.logo img {
+    display: block;
+    width: clamp(110px, 18vw, 190px);
+    height: auto;
+    max-height: 85px;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        height: 100px;
+        min-height: 100px;
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        height: 100%;
+        max-width: 180px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: min(160px, 35vw);
+        height: 72px;
+        max-height: 72px;
+        object-fit: contain;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    header {
+        height: 90px;
+        min-height: 90px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        height: 90px;
+        max-width: 145px;
+        flex: 0 1 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 135px;
+        height: 65px;
+        max-width: 135px;
+        max-height: 65px;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    header {
+        height: 82px;
+        min-height: 82px;
+        padding: 0 14px;
+    }
+
+    .logo {
+        height: 82px;
+        max-width: 125px;
+    }
+
+    .logo img {
+        width: 115px;
+        height: 56px;
+        max-width: 115px;
+        max-height: 56px;
+    }
+}
