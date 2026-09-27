@@ -653,3 +653,15 @@ header img {
         max-height: 55px !important;
     }
 }
+/* Keep header contents inside the header */
+header {
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 90px !important;
+        min-height: 90px !important;
+        overflow: hidden;
+    }
+}
